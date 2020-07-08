@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Titre de la page</title>
+	<script type="text/javascript">
+		function searchNumber(champ) {
+			let newNumber = champ.value;
+			let numberSearched = 55;
+				if (newNumber == numberSearched) {
+					return true;
+				} else {
+					return false;
+				}
+		}
+		function rangeNumbers(champ) {
+			let newNumb = champ.value;
+			if ((newNumb > 0) && (newNumb < 100)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		function verifNumber(f) {
+			let newNumber = searchNumber(f.newNumber);
+			let newNumb = rangeNumbers(f.newNumber);
+			if (newNumb === false) {
+				alert("Veuillez entrer un nombre entre 0 et 100");
+			}
+			if (newNumber === false) {
+				alert("Ce n'est pas le bon nombre !");
+			} else {
+				alert("Félicitations !");
+			}
+			f.newNumber.value = "";
+			return false;
+		}
+	</script>
+</head>
+<body>
+<form action="foundNumberForm.html" method="POST" onsubmit="return verifNumber(this)">
+	<label for="newNumber">Trouvez un nombre entre 0 et 100</label>
+	<input type="number" name="newNumber" id="newNumber">
+	<button type="submit">Envoyer</button>
+</form>
+</body>
+</html>

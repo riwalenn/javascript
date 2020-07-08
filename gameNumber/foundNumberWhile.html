@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <script type="text/javascript">
+        let numberSearched = 32;
+        let newNumber = parseInt(prompt("Entrez un nombre entre 0 et 100 : "));
+        while (numberSearched != newNumber) {
+            if (newNumber < 0 || newNumber > 100) {
+                console.log("Vous devez entrer un nombre entre 0 et 100");
+            }
+            console.log("Vous n'avez pas trouvé le nombre !");
+            newNumber = parseInt(prompt("Entrez un nombre entre 0 et 100 :"));
+        }
+        console.log("Félicitations, vous avez trouvé le nombre !");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

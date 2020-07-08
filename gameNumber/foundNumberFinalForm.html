@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trouvez le nombre !</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="gameNumber.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Rechercher un nombre</h1>
+    <div class="row">
+        <form action="foundNumberFinalForm.html" method="post" onsubmit="return gameNumber.verifNumber('nombreSearched');">
+            <div class="form-group">
+                <label for="nombreSearched">Entrez un nombre :</label>
+                <input type="number" class="form-control" id="nombreSearched" aria-describedby="nombre">
+                <small id="nombre" class="form-text text-muted">Trouvez un nombre entre 0 et 100.</small>
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <script type="text/javascript">
+        class RechercheNumber{
+            constructor(numberSearch, number) {
+                this.numberSearch = numberSearch;
+                this.number = number;
+            }
+
+            searchNumber() {
+                if ((this.number > 0) && (this.number < 100)) {
+                    if (this.number == this.numberSearch) {
+                        console.log("félicitations, vous avez trouvé le nombre !");
+                    } else {
+                        console.log("Vous n'avez pas trouvé le nombre.");
+                    }
+                } else {
+                    console.log("vous devez entrer un nombre entre 0 et 100.");
+                }
+            }
+        }
+
+        let nouveauNombre = parseInt(prompt("Entrez un nombre entre 0 et 100 :", ""));
+        const newNumber = new RechercheNumber(48, nouveauNombre);
+        newNumber.searchNumber();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
